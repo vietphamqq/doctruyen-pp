@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chính sách quyền riêng tư — DocTruyen.ai</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      font-size: 15px; line-height: 1.7;
+      color: #222; background: #fafafa;
+      padding: 0 16px;
+    }
+    .wrap { max-width: 740px; margin: 0 auto; padding: 48px 0 80px; }
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; color: #1a1a2e; }
+    .subtitle { color: #666; font-size: 14px; margin-bottom: 40px; }
+    h2 { font-size: 18px; font-weight: 600; color: #1a1a2e;
+         margin: 36px 0 10px; border-left: 3px solid #4caf50; padding-left: 12px; }
+    p  { margin-bottom: 12px; color: #333; }
+    ul { margin: 8px 0 12px 20px; }
+    li { margin-bottom: 6px; }
+    a  { color: #4caf50; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .en { color: #888; font-size: 13px; font-style: italic; margin-top: -8px; margin-bottom: 12px; }
+    .badge {
+      display: inline-block; background: #e8f5e9;
+      color: #2e7d32; border-radius: 4px;
+      font-size: 12px; font-weight: 600;
+      padding: 2px 8px; margin-bottom: 16px;
+    }
+    .card {
+      background: #fff; border: 1px solid #e8e8e8;
+      border-radius: 10px; padding: 20px 24px; margin-bottom: 12px;
+    }
+    .updated { font-size: 13px; color: #999; margin-top: 48px; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+    th, td { text-align: left; padding: 10px 12px; font-size: 14px;
+             border-bottom: 1px solid #eee; }
+    th { background: #f5f5f5; font-weight: 600; color: #444; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Chính sách quyền riêng tư</h1>
+  <p class="subtitle">Privacy Policy · DocTruyen.ai Chrome Extension</p>
+  <span class="badge">Cập nhật: tháng 5 năm 2026</span>
+
+  <div class="card">
+    <p><strong>Tóm tắt ngắn gọn:</strong> DocTruyen.ai không thu thập, lưu trữ, hoặc bán dữ liệu cá nhân của bạn. Nội dung truyện bạn đọc được gửi đến máy chủ của chúng tôi chỉ để chuyển thành giọng đọc, không được lưu lại.</p>
+    <p class="en"><em>Short version: DocTruyen.ai does not collect, store, or sell your personal data. Story text is sent to our server only for text-to-speech conversion and is never stored.</em></p>
+  </div>
+
+  <!-- 1 -->
+  <h2>1. Dữ liệu chúng tôi xử lý</h2>
+  <p class="en">1. Data we process</p>
+
+  <table>
+    <tr><th>Dữ liệu</th><th>Mục đích</th><th>Lưu trữ</th></tr>
+    <tr>
+      <td>Nội dung văn bản truyện (từng đoạn)</td>
+      <td>Chuyển thành giọng đọc (TTS)</td>
+      <td>Không lưu cá nhân. Audio được cache chung để tối ưu tốc độ.</td>
+    </tr>
+    <tr>
+      <td>ID người dùng ẩn danh (UUID)</td>
+      <td>Tính giới hạn 10 chương/ngày (gói miễn phí)</td>
+      <td>Lưu tạm 48 giờ trong Cloudflare KV, không liên kết với danh tính</td>
+    </tr>
+    <tr>
+      <td>License key (gói Pro)</td>
+      <td>Xác minh đăng ký Pro</td>
+      <td>Lưu trên thiết bị người dùng (chrome.storage.sync)</td>
+    </tr>
+    <tr>
+      <td>Vị trí đọc (URL + số đoạn)</td>
+      <td>Bookmark để tiếp tục đọc</td>
+      <td>Chỉ lưu trên thiết bị người dùng (chrome.storage.sync)</td>
+    </tr>
+  </table>
+
+  <p>Chúng tôi <strong>không</strong> thu thập: tên, email, địa chỉ IP dài hạn, lịch sử duyệt web, hoặc bất kỳ thông tin nhận dạng cá nhân nào khác.</p>
+  <p class="en"><em>We do NOT collect: name, email, long-term IP addresses, browsing history, or any other personally identifying information.</em></p>
+
+  <!-- 2 -->
+  <h2>2. Cách chúng tôi sử dụng dữ liệu</h2>
+  <p class="en">2. How we use data</p>
+  <ul>
+    <li><strong>Văn bản truyện</strong> được gửi đến máy chủ Cloudflare Worker của chúng tôi để chuyển thành file âm thanh qua Google Cloud Text-to-Speech API, sau đó trả về trình duyệt của bạn. Văn bản <em>không được lưu</em> vào cơ sở dữ liệu. File âm thanh được cache tạm thời để người dùng khác đọc cùng chương không phải chờ tổng hợp lại (audio chung, không gắn với cá nhân).</li>
+    <li><strong>UUID ẩn danh</strong> được tạo ngẫu nhiên mỗi lần cài extension và dùng chỉ để đếm số chương đã đọc trong ngày. UUID này không liên kết được với bất kỳ thông tin cá nhân nào.</li>
+  </ul>
+
+  <!-- 3 -->
+  <h2>3. Bên thứ ba</h2>
+  <p class="en">3. Third parties</p>
+  <table>
+    <tr><th>Dịch vụ</th><th>Mục đích</th><th>Dữ liệu gửi đi</th></tr>
+    <tr>
+      <td><a href="https://cloud.google.com/text-to-speech" target="_blank">Google Cloud TTS</a></td>
+      <td>Tổng hợp giọng đọc</td>
+      <td>Đoạn văn bản truyện (tối đa 1.500 ký tự mỗi lần)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Cloudflare</a></td>
+      <td>Máy chủ proxy & lưu cache</td>
+      <td>Yêu cầu API (không có nội dung cá nhân)</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.lemonsqueezy.com/privacy" target="_blank">LemonSqueezy</a></td>
+      <td>Xử lý thanh toán (gói Pro)</td>
+      <td>Email & thông tin thanh toán (do LemonSqueezy xử lý trực tiếp, chúng tôi không thấy)</td>
+    </tr>
+  </table>
+  <p>Chúng tôi không bán, cho thuê, hoặc chia sẻ dữ liệu của bạn với bất kỳ bên thứ ba nào ngoài các dịch vụ liệt kê ở trên vì mục đích vận hành.</p>
+  <p class="en"><em>We do not sell, rent, or share your data with any third party outside those listed above for operational purposes.</em></p>
+
+  <!-- 4 -->
+  <h2>4. Lưu trữ dữ liệu</h2>
+  <p class="en">4. Data retention</p>
+  <ul>
+    <li>Counter chương/ngày (UUID ẩn danh): tự động xóa sau 48 giờ</li>
+    <li>Cache âm thanh (R2 Cloudflare): lưu vô thời hạn để tối ưu tốc độ — không chứa thông tin cá nhân</li>
+    <li>Dữ liệu trên thiết bị (bookmark, cài đặt): do bạn kiểm soát, xóa bằng cách gỡ extension</li>
+  </ul>
+
+  <!-- 5 -->
+  <h2>5. Quyền của bạn</h2>
+  <p class="en">5. Your rights</p>
+  <ul>
+    <li>Bạn có thể xóa tất cả dữ liệu cục bộ bằng cách gỡ cài đặt extension</li>
+    <li>Không có tài khoản → không có dữ liệu cá nhân để yêu cầu xóa với chúng tôi</li>
+    <li>Nếu bạn là khách hàng Pro (có email với LemonSqueezy), bạn có thể yêu cầu xóa tài khoản tại <a href="https://app.lemonsqueezy.com/my-orders" target="_blank">app.lemonsqueezy.com</a></li>
+  </ul>
+
+  <!-- 6 -->
+  <h2>6. Bảo mật</h2>
+  <p class="en">6. Security</p>
+  <p>Tất cả dữ liệu truyền tải đều được mã hóa qua HTTPS/TLS. API key Google Cloud TTS được lưu dưới dạng secret trong Cloudflare Worker, không bao giờ tiếp xúc với client. License key được mã hóa khi truyền.</p>
+
+  <!-- 7 -->
+  <h2>7. Trẻ em</h2>
+  <p class="en">7. Children</p>
+  <p>DocTruyen.ai không nhắm đến trẻ em dưới 13 tuổi và không cố ý thu thập thông tin của trẻ em.</p>
+
+  <!-- 8 -->
+  <h2>8. Thay đổi chính sách</h2>
+  <p class="en">8. Policy changes</p>
+  <p>Nếu chính sách này có thay đổi quan trọng, chúng tôi sẽ thông báo qua cập nhật extension trên Chrome Web Store và cập nhật ngày ở đầu trang này.</p>
+
+  <!-- 9 -->
+  <h2>9. Liên hệ</h2>
+  <p class="en">9. Contact</p>
+  <p>Mọi câu hỏi về quyền riêng tư, vui lòng liên hệ:<br>
+  Email: <a href="mailto:phamquangquocviet@gmail.com">phamquangquocviet@gmail.com</a></p>
+
+  <p class="updated">Cập nhật lần cuối: 18 tháng 5, 2026 · Last updated: May 18, 2026</p>
+
+</div>
+</body>
+</html>
