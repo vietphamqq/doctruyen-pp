@@ -45,7 +45,7 @@
 
   <h1>Chính sách quyền riêng tư</h1>
   <p class="subtitle">Privacy Policy · DocTruyen.ai Chrome Extension</p>
-  <span class="badge">Cập nhật: tháng 5 năm 2026</span>
+  <span class="badge">Cập nhật: 28 tháng 9 năm 2026</span>
 
   <div class="card">
     <p><strong>Tóm tắt ngắn gọn:</strong> DocTruyen.ai không thu thập, lưu trữ, hoặc bán dữ liệu cá nhân của bạn. Nội dung truyện bạn đọc được gửi đến máy chủ của chúng tôi chỉ để chuyển thành giọng đọc, không được lưu lại.</p>
@@ -65,23 +65,28 @@
     </tr>
     <tr>
       <td>ID người dùng ẩn danh (UUID)</td>
-      <td>Tính giới hạn 10 chương/ngày (gói miễn phí)</td>
+      <td>Tính giới hạn 1 chương giọng AI/ngày (gói miễn phí) và hạn mức tháng (gói Pro)</td>
       <td>Lưu tạm 48 giờ trong Cloudflare KV, không liên kết với danh tính</td>
     </tr>
     <tr>
       <td>License key (gói Pro)</td>
       <td>Xác minh đăng ký Pro</td>
-      <td>Lưu trên thiết bị người dùng (chrome.storage.sync)</td>
+      <td>Lưu trong Chrome của bạn (chrome.storage.sync — đồng bộ qua tài khoản Google nếu bạn bật Chrome Sync)</td>
     </tr>
     <tr>
-      <td>Vị trí đọc (URL + số đoạn)</td>
-      <td>Bookmark để tiếp tục đọc</td>
-      <td>Chỉ lưu trên thiết bị người dùng (chrome.storage.sync)</td>
+      <td>Vị trí đọc (URL chương + số đoạn) và 20 chương nghe gần nhất</td>
+      <td>Bookmark để tiếp tục đọc, danh sách "Chương gần đây"</td>
+      <td>Lưu trong Chrome của bạn. Bookmark dùng chrome.storage.sync nên có thể được Google đồng bộ giữa các thiết bị của bạn nếu bật Chrome Sync; lịch sử chỉ lưu cục bộ.</td>
+    </tr>
+    <tr>
+      <td>Thống kê tổng hợp (loại gói, kết quả yêu cầu, số ký tự)</td>
+      <td>Theo dõi lỗi và chi phí vận hành</td>
+      <td>Chỉ là số đếm tổng hợp trên máy chủ, không kèm ID người dùng, URL hay nội dung</td>
     </tr>
   </table>
 
-  <p>Chúng tôi <strong>không</strong> thu thập: tên, email, địa chỉ IP dài hạn, lịch sử duyệt web, hoặc bất kỳ thông tin nhận dạng cá nhân nào khác.</p>
-  <p class="en"><em>We do NOT collect: name, email, long-term IP addresses, browsing history, or any other personally identifying information.</em></p>
+  <p>Chúng tôi <strong>không</strong> thu thập: tên, email, địa chỉ IP dài hạn, lịch sử duyệt web nói chung, hoặc bất kỳ thông tin nhận dạng cá nhân nào khác. Địa chỉ các chương truyện bạn nghe chỉ được lưu trong Chrome của bạn để tiếp tục đọc, không được gửi về máy chủ của chúng tôi.</p>
+  <p class="en"><em>We do NOT collect: name, email, long-term IP addresses, general browsing history, or any other personally identifying information. The addresses of chapters you listen to are kept only in your Chrome so you can resume; they are never sent to our server.</em></p>
 
   <!-- 2 -->
   <h2>2. Cách chúng tôi sử dụng dữ liệu</h2>
@@ -119,8 +124,8 @@
   <h2>4. Lưu trữ dữ liệu</h2>
   <p class="en">4. Data retention</p>
   <ul>
-    <li>Counter chương/ngày (UUID ẩn danh): tự động xóa sau 48 giờ</li>
-    <li>Cache âm thanh (R2 Cloudflare): lưu vô thời hạn để tối ưu tốc độ — không chứa thông tin cá nhân</li>
+    <li>Counter chương/ngày (UUID ẩn danh): tự động xóa sau 48 giờ; hạn mức tháng gói Pro: xóa sau 40 ngày</li>
+    <li>Cache âm thanh (R2 Cloudflare): tự động xóa sau 90 ngày — không chứa thông tin cá nhân</li>
     <li>Dữ liệu trên thiết bị (bookmark, cài đặt): do bạn kiểm soát, xóa bằng cách gỡ extension</li>
   </ul>
 
@@ -154,7 +159,7 @@
   <p>Mọi câu hỏi về quyền riêng tư, vui lòng liên hệ:<br>
   Email: <a href="mailto:phamquangquocviet@gmail.com">phamquangquocviet@gmail.com</a></p>
 
-  <p class="updated">Cập nhật lần cuối: 18 tháng 5, 2026 · Last updated: May 18, 2026</p>
+  <p class="updated">Cập nhật lần cuối: 28 tháng 9, 2026 · Last updated: September 28, 2026</p>
 
 </div>
 </body>
